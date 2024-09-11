@@ -1,0 +1,55 @@
+@import './_variables';
+
+//fonts
+@import url('https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Comfortaa:wght@300..700&family=Homemade+Apple&display=swap');
+
+//resets
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  line-height: 1;
+  font-family: $font-main;
+  background-color: $grey;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+}
+
+input,
+select,
+option,
+optgroup,
+textarea,
+button,
+pre,
+code {
+  font-size: 100%;
+  font-family: inherit;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+//globals
+
+.pink {
+  font-weight: bolder;
+  color: $pink;
+}

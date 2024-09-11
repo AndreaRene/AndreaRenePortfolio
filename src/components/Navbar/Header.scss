@@ -1,0 +1,70 @@
+// Import variables first
+@import '../../styles/_variables.scss';
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $main-blue;
+  padding: 1rem 4rem;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.navbar-logo {
+  color: $pink;
+  letter-spacing: 0.2rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+  // text-shadow: -0.03em -0.03em 0 $pink, 0.03em 0.03em 0 $green,
+  //   -0.03em 0.03em 0 $green, 0.03em -0.03em 0 $grey;
+  font-family: $font-playful;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar-links ul {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar-links a {
+  color: $grey;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: $font-main;
+}
+
+.navbar-links.active {
+  display: block;
+}
+
+.mobile-menu-icon {
+  display: none;
+}
+
+/* For mobile view */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .mobile-menu-icon {
+    display: block;
+    cursor: pointer;
+  }
+}
