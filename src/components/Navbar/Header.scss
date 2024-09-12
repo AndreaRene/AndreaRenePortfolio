@@ -1,6 +1,6 @@
-// Import variables first
 @import '../../styles/_variables.scss';
 
+/* Navbar layout */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -16,16 +16,16 @@
   width: 100%;
 }
 
+/* Logo styling */
 .navbar-logo {
   color: $pink;
   letter-spacing: 0.2rem;
   font-size: 2.5rem;
   font-weight: bold;
-  // text-shadow: -0.03em -0.03em 0 $pink, 0.03em 0.03em 0 $green,
-  //   -0.03em 0.03em 0 $green, 0.03em -0.03em 0 $grey;
   font-family: $font-playful;
 }
 
+/* Desktop links */
 .navbar-links {
   display: flex;
   gap: 2rem;
@@ -33,20 +33,36 @@
 
 .navbar-links ul {
   display: flex;
-  gap: 2rem;
 }
 
-.navbar-links a {
-  color: $grey;
+/* Link styling */
+.nav-link {
+  color: $bright-attention;
   text-decoration: none;
-  font-weight: bold;
   font-family: $font-main;
+  font-size: 1.2rem;
+  padding: 0.8rem 0.5rem;
 }
 
-.navbar-links.active {
-  display: block;
+.nav-link:hover {
+  text-decoration: underline;
+  text-underline-position: under;
+  text-decoration-thickness: 0.2rem;
+  text-decoration-color: $pink;
+  color: $green;
 }
 
+/* Active link styling */
+.active {
+  font-weight: bolder;
+  text-decoration: underline;
+  text-underline-position: under;
+  text-decoration-thickness: 0.2rem;
+  text-decoration-color: $bright-attention;
+  color: $pink;
+}
+
+/* Mobile menu icon (only visible on mobile) */
 .mobile-menu-icon {
   display: none;
 }

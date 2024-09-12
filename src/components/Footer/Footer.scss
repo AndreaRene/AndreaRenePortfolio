@@ -1,0 +1,33 @@
+@import '../../styles/_variables.scss';
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  font-size: 2rem;
+  font-weight: bolder;
+  text-align: center;
+  background-color: $pink;
+  color: $main-blue;
+  line-height: 1.2;
+}
+
+.footer-click {
+  text-decoration: none;
+  color: $bright-attention;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    color: $green;
+    text-shadow: none;
+    transform: translateY(3px);
+  }
+
+  &:focus {
+    outline: 3px dashed $bright-attention;
+    outline-offset: 3px;
+  }
+}

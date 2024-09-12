@@ -4,6 +4,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Comfortaa:wght@300..700&family=Homemade+Apple&display=swap');
 
 //resets
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -15,10 +22,21 @@ html {
 }
 
 body {
+  height: 100%;
   margin: 0;
-  line-height: 1;
+  display: flex;
+  flex-direction: column;
   font-family: $font-main;
   background-color: $grey;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.main-content {
+  flex: 1;
 }
 
 h1,

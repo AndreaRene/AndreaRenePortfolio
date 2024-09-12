@@ -1,19 +1,11 @@
 import './Header.scss';
 import { useState } from 'react';
-import PropTypes from 'prop-types';
+import { NavLink } from 'react-router-dom';
 import CloseButton from "../../assets/closebutton.svg";
 import OpenButton from "../../assets/menubutton.svg";
 
-const Header = ( { setContent } ) => {
-    const [activePage, setActivePage] = useState( 'about' );
+const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState( false );
-
-    const handleLinkClick = ( event ) => {
-        const pageId = event.target.id;
-        setActivePage( pageId );
-        setContent( pageId );
-        setIsMenuOpen( false );
-    };
 
     const toggleMobileMenu = () => setIsMenuOpen( !isMenuOpen );
 
@@ -29,44 +21,40 @@ const Header = ( { setContent } ) => {
                 <nav className={ isMenuOpen ? "navbar-links active" : "navbar-links" }>
                     <ul>
                         <li>
-                            <a
-                                href="#about"
-                                id="about"
-                                className={ activePage === 'about' ? 'active' : '' }
-                                onClick={ handleLinkClick }
+                            <NavLink
+                                to="/"
+                                className={ ( { isActive } ) => ( isActive ? 'nav-link active' : 'nav-link' ) }
+                                onClick={ () => setIsMenuOpen( false ) }
                             >
                                 Who I Am
-                            </a>
+                            </NavLink>
                         </li>
                         <li>
-                            <a
-                                href="#portfolio"
-                                id="portfolio"
-                                className={ activePage === 'portfolio' ? 'active' : '' }
-                                onClick={ handleLinkClick }
+                            <NavLink
+                                to="/portfolio"
+                                className={ ( { isActive } ) => ( isActive ? 'nav-link active' : 'nav-link' ) }
+                                onClick={ () => setIsMenuOpen( false ) }
                             >
-                                What I&rsquo;ve Done
-                            </a>
+                                What I’ve Done
+                            </NavLink>
                         </li>
                         <li>
-                            <a
-                                href="#contact"
-                                id="contact"
-                                className={ activePage === 'contact' ? 'active' : '' }
-                                onClick={ handleLinkClick }
+                            <NavLink
+                                to="/contact"
+                                className={ ( { isActive } ) => ( isActive ? 'nav-link active' : 'nav-link' ) }
+                                onClick={ () => setIsMenuOpen( false ) }
                             >
-                                Let&rsquo;s Connect
-                            </a>
+                                Let’s Connect
+                            </NavLink>
                         </li>
                         <li>
-                            <a
-                                href="#resume"
-                                id="resume"
-                                className={ activePage === 'resume' ? 'active' : '' }
-                                onClick={ handleLinkClick }
+                            <NavLink
+                                to="/resume"
+                                className={ ( { isActive } ) => ( isActive ? 'nav-link active' : 'nav-link' ) }
+                                onClick={ () => setIsMenuOpen( false ) }
                             >
                                 Resumé
-                            </a>
+                            </NavLink>
                         </li>
                     </ul>
                 </nav>
@@ -82,10 +70,6 @@ const Header = ( { setContent } ) => {
             </div>
         </header>
     );
-};
-
-Header.propTypes = {
-    setContent: PropTypes.func.isRequired,
 };
 
 export default Header;
