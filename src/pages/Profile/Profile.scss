@@ -1,0 +1,150 @@
+@import '../../styles/_variables.scss';
+
+#aboutMe {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 1rem;
+  padding: 1rem 35rem;
+  color: $main-blue;
+}
+
+#aboutMe h1,
+#aboutMe h2,
+#aboutMe div {
+  width: 30%;
+  height: auto;
+  white-space: nowrap;
+  //   margin: auto 0;
+}
+
+#aboutMe h1 {
+  margin: auto 0 0;
+  font-size: 2.5em;
+}
+
+#aboutMe h2 {
+  margin-top: auto;
+  width: 50%;
+  font-size: 2em;
+  text-align: right;
+}
+
+// #aboutMe div:first-of-type {
+//   margin: 0;
+//   white-space: normal;
+// }
+
+#aboutMe p {
+  font-size: 1.5em;
+}
+
+.flair {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: end;
+  margin: auto 0 0;
+}
+
+#aboutMe img {
+  width: 20%;
+  border: 0.3rem solid $main-blue;
+  border-radius: 50%;
+}
+
+#aboutMe .right {
+  text-align: right;
+}
+
+#aboutMe .left {
+  text-align: left;
+}
+
+@media (max-width: 1600px) {
+  #aboutMe {
+    padding: 0 25rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  #aboutMe {
+    padding: 0 7rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  #aboutMe h1 {
+    font-size: 2.5rem;
+  }
+
+  #aboutMe h2 {
+    font-size: 2rem;
+  }
+
+  #aboutMe p {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #aboutMe {
+    padding: 0 3rem 0.5rem;
+  }
+
+  #aboutMe h1 {
+    margin-bottom: 0;
+    font-size: 1.4rem;
+  }
+
+  #aboutMe h2 {
+    font-size: 1rem;
+  }
+
+  #aboutMe p {
+    font-size: 0.7rem;
+  }
+
+  #aboutMe img {
+    width: 30%;
+  }
+}
+
+@media (min-width: 560px) and (max-width: 768px) {
+  #aboutMe h1 {
+    font-size: 2rem;
+  }
+
+  #aboutMe h2 {
+    font-size: 1.5rem;
+  }
+
+  #aboutMe p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #aboutMe {
+    flex-direction: column;
+  }
+
+  #aboutMe h1 {
+    font-size: 1.5rem;
+  }
+
+  #aboutMe h2 {
+    align-self: flex-end;
+    font-size: 0.9rem;
+  }
+
+  #aboutMe img {
+    align-self: center;
+    border: 0.2em solid $main-blue;
+    width: 50%;
+  }
+
+  .hiddenAbout {
+    display: none;
+  }
+}
