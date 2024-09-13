@@ -1,7 +1,7 @@
 import './Profile.scss';
 import avatarthumb from '../../assets/avatars/avatarthumb.png';
 import Journal from '../../components/Journal/Journal';
-import journalEntries from '../../components/Journal/entries'; // Import the journal entries
+import journalEntries from '../../components/Journal/entries';
 
 const Profile = () => {
     return (
