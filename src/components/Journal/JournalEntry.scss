@@ -8,8 +8,6 @@
   transition: transform 0.3s ease-in-out;
   width: 100%;
   color: $main-blue;
-
-  /* Add some spacing on the sides to mimic the look of handwritten notes */
   padding-left: 3rem;
   padding-right: 3rem;
 }
@@ -38,7 +36,5 @@
   white-space: pre-line;
   width: 80%;
   margin: 2rem auto;
-
-  /* Some extra spacing between paragraphs */
   line-height: 1.8rem;
 }

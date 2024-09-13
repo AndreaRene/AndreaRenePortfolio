@@ -8,7 +8,6 @@
 
 #about-me {
   display: flex;
-  // flex-wrap: wrap;
   justify-content: center;
   margin-top: 1rem;
   flex: 0 0 auto;
@@ -18,7 +17,6 @@
 #about-me h1,
 #about-me h2,
 #about-me div {
-  // width: 30%;
   height: auto;
   white-space: nowrap;
 }
@@ -87,7 +85,6 @@
   margin: 2rem auto;
   position: relative;
 
-  /* Subtle gradient from left to right */
   background: linear-gradient(
     to right,
     rgba(0, 0, 0, 0.05) 0%,
@@ -95,7 +92,6 @@
     rgba(0, 0, 0, 0.01) 100%
   );
 
-  /* Box shadow for page edges */
   box-shadow:
     2px 0 0 -2px rgba(0, 0, 0, 0.1),
     4px 0 0 -2px rgba(0, 0, 0, 0.1),
@@ -103,8 +99,6 @@
     8px 0 0 -2px rgba(0, 0, 0, 0.1),
     10px 0 0 -2px rgba(0, 0, 0, 0.1),
     12px 0 0 -2px rgba(0, 0, 0, 0.1);
-
-  /* Border for the 3D effect */
   border-right: 2px solid rgba(0, 0, 0, 0.2);
   border-bottom: 2px solid rgba(0, 0, 0, 0.2);
 
