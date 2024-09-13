@@ -8,7 +8,7 @@ const Profile = () => {
     <section id="profile-page">
       <section id="about-me">
         <div className="left-side">
-          <h1>
+          <h2>
             <div>
               Hi, there.
               <br />
@@ -16,13 +16,13 @@ const Profile = () => {
             <div>
               I&apos;m <span className="pink">Andrea</span>.
             </div>
-          </h1>
+          </h2>
           <div>
-            <p>I strive for concise and</p>
+            <p>I strive for concise</p>
             <p>
-              <span className="pink">performant</span> code with an
+              and <span className="pink">performant</span> code with
             </p>
-            <p>emphasis on future-proofing.</p>
+            <p>an emphasis on future-proofing.</p>
           </div>
         </div>
         <img src={avatarthumb} alt="a comic style face with glasses" />

@@ -2,7 +2,7 @@
 
 #about-me {
   display: flex;
-  flex-wrap: wrap;
+  // flex-wrap: wrap;
   justify-content: center;
   margin-top: 1rem;
 
@@ -25,7 +25,6 @@
 #about-me h2 {
   width: 100%;
   font-size: 2em;
-  text-align: right;
 }
 
 #about-me p {
@@ -42,6 +41,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  padding-top: 5rem;
 }
 
 .flair {
@@ -53,10 +53,13 @@
 }
 
 #about-me img {
-  width: 200px;
-  height: 200px;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 12rem;
   border: 0.3rem solid $main-blue;
   border-radius: 50%;
+  object-fit: cover;
 }
 
 #journal-section {
