@@ -7,15 +7,13 @@ import Profile from './pages/Profile/Profile';
 function App() {
   return (
     <Router>
-      <div className="app-container">
-        <Header />
-        <main className="main-content">
-          <Routes>
-            <Route path="/" element={<Profile />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
+      <Header />
+      <main className="main-content">
+        <Routes>
+          <Route path="/" element={<Profile />} />
+        </Routes>
+      </main>
+      <Footer />
     </Router>
   );
 }

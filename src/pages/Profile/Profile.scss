@@ -1,11 +1,17 @@
 @import '../../styles/_variables.scss';
 
+#profile-page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 #about-me {
   display: flex;
   // flex-wrap: wrap;
   justify-content: center;
   margin-top: 1rem;
-
+  flex: 0 0 auto;
   color: $main-blue;
 }
 
@@ -63,7 +69,8 @@
 }
 
 #journal-section {
-  margin-top: 4rem;
+  flex: 1;
+  margin-top: 2rem;
   padding: 0 10rem;
   display: flex;
   justify-content: center;
@@ -73,15 +80,45 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: $grey;
-  border: 1px solid $main-blue;
-  border-radius: 0.2rem;
-  padding: 2rem;
-  width: 80%;
+  background-color: #f9f4e1;
+  padding: 5rem 2rem 2rem;
+  width: 70%;
   max-width: 900px;
   margin: 2rem auto;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
-  height: 30vh;
+  position: relative;
+
+  /* Subtle gradient from left to right */
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.05) 0%,
+    #f9f4e1 50%,
+    rgba(0, 0, 0, 0.01) 100%
+  );
+
+  /* Box shadow for page edges */
+  box-shadow:
+    2px 0 0 -2px rgba(0, 0, 0, 0.1),
+    4px 0 0 -2px rgba(0, 0, 0, 0.1),
+    6px 0 0 -2px rgba(0, 0, 0, 0.1),
+    8px 0 0 -2px rgba(0, 0, 0, 0.1),
+    10px 0 0 -2px rgba(0, 0, 0, 0.1),
+    12px 0 0 -2px rgba(0, 0, 0, 0.1);
+
+  /* Border for the 3D effect */
+  border-right: 2px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: -7px;
+    top: 5px;
+    width: 16px;
+    height: calc(100% - 20px);
+
+    background: linear-gradient(rgb(151, 148, 148) 20%, $grey 80%);
+    background-size: 100% 8px;
+  }
 }
 
 .journal-controls {
