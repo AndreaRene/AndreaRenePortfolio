@@ -1,5 +1,7 @@
 import './Profile.scss';
 import avatarthumb from '../../assets/avatars/avatarthumb.png';
+import Journal from '../../components/Journal/Journal';
+import journalEntries from '../../components/Journal/entries'; // Import the journal entries
 
 const Profile = () => {
     return (
@@ -26,6 +28,9 @@ const Profile = () => {
                 Let&apos;s go build<br />
                 something <span className='pink'>together</span>.
             </h2>
+
+            {/* Pass the imported journal entries to the Journal component */ }
+            <Journal entries={ journalEntries } />
         </section>
     );
 };
