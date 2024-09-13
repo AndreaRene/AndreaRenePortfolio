@@ -11,9 +11,7 @@ function App() {
         <Header />
         <div className="main-content">
           <Routes>
-
-            <Route path="/" element={ <Profile /> } />
-
+            <Route path="/" element={<Profile />} />
           </Routes>
         </div>
         <Footer />
