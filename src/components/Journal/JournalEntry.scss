@@ -1,0 +1,36 @@
+@import '../../styles/_variables.scss';
+
+.journal-entry {
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  transform: rotate(2deg);
+  transition: transform 0.3s ease-in-out;
+  width: 100%;
+  color: $main-blue;
+}
+
+.journal-entry:nth-child(odd) {
+  transform: rotate(-2deg);
+}
+
+.journal-entry:hover {
+  transform: rotate(0);
+}
+
+/* Journal title */
+.journal-entry-title {
+  font-family: 'Annie Use Your Telescope', cursive;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+/* Journal content */
+.journal-entry-content {
+  margin-top: 2rem;
+  font-family: 'Patrick Hand', sans-serif;
+  font-size: 1.3rem;
+  white-space: pre-line;
+}

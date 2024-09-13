@@ -1,6 +1,7 @@
 @import '../../styles/_variables.scss';
 
 .footer {
+  margin-top: auto; /* Pushes the footer down when needed */
   display: flex;
   flex-direction: column;
   justify-content: center;

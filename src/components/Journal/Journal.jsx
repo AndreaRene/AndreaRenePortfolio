@@ -30,14 +30,19 @@ const Journal = ({ entries }) => {
         content={entries[currentPage].content}
       />
       <div className="journal-controls">
-        <button onClick={prevPage} disabled={currentPage === 0}>
-          Previous
+        <button
+          className="journal-btn prev-btn"
+          onClick={prevPage}
+          disabled={currentPage === 0}
+        >
+          Turn back
         </button>
         <button
+          className="journal-btn next-btn"
           onClick={nextPage}
           disabled={currentPage === entries.length - 1}
         >
-          Next
+          Turn page
         </button>
       </div>
     </div>

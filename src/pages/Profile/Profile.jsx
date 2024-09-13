@@ -5,36 +5,43 @@ import journalEntries from '../../components/Journal/entries';
 
 const Profile = () => {
   return (
-    <section id="aboutMe">
-      <h1 className="left">
-        <div>
-          Hi, there.
-          <br />
+    <section id="profile-page">
+      <section id="about-me">
+        <div className="left-side">
+          <h1>
+            <div>
+              Hi, there.
+              <br />
+            </div>
+            <div>
+              I&apos;m <span className="pink">Andrea</span>.
+            </div>
+          </h1>
+          <div>
+            <p>I strive for concise and</p>
+            <p>
+              <span className="pink">performant</span> code with an
+            </p>
+            <p>emphasis on future-proofing.</p>
+          </div>
         </div>
-        <div>
-          I&apos;m <span className="pink">Andrea</span>.
+        <img src={avatarthumb} alt="a comic style face with glasses" />
+        <div className="right-side">
+          <div>
+            <p>I just really like</p>
+            <p>JavaScript... ok?</p>
+          </div>
+          <h2>
+            Let&apos;s go build
+            <br />
+            something <span className="pink">together</span>.
+          </h2>
         </div>
-      </h1>
-      <img src={avatarthumb} alt="a comic style face with glasses" />
-      <div className="right hiddenAbout flair">
-        <p>I just really like</p>
-        <p>JavaScript... ok?</p>
-      </div>
-      <div className="left hiddenAbout">
-        <p>I strive for concise and</p>
-        <p>
-          <span className="pink">performant</span> code with an
-        </p>
-        <p>emphasis on future-proofing.</p>
-      </div>
-      <h2 className="right">
-        Let&apos;s go build
-        <br />
-        something <span className="pink">together</span>.
-      </h2>
+      </section>
 
-      {/* Pass the imported journal entries to the Journal component */}
-      <Journal entries={journalEntries} />
+      <section id="journal-section">
+        <Journal entries={journalEntries} />
+      </section>
     </section>
   );
 };

@@ -1,19 +1,19 @@
 const entries = [
   {
-    title: 'My Journey',
-    content: `My journey in web development began with a fascination for coding, and I've been joyfully navigating the realms of full stack technologies ever since. By day, I lead and mentor aspiring tech wizards in a full stack development bootcamp, turning complex coding puzzles into fun, approachable challenges. Every day is a celebration of new discoveries and 'Eureka!' moments, both for my students and myself.`
+    title: 'How It All Started',
+    content: `So, it all began with my curiosity about coding. I started digging into the world of web development and I got hooked. Now, I'm knee-deep in full stack technologies, exploring all the corners of the dev universe. These days, I spend a lot of time helping others on their coding journeys. It’s wild to see how a complex puzzle becomes simple when you're teaching it to others. My students? Total wizards in the making, and I'm learning just as much from them as they are from me.`
   },
   {
-    title: 'Beyond Code',
-    content: `When the code rests, my adventurous spirit takes over. You might catch me traversing the galaxies of Star Trek, waving a wand in the world of Harry Potter, or diving deep into the realms of sci-fi and fantasy. I'm also a proud gamer, Disney buff, and a connoisseur of all things anime, manga, and graphic novels.`
+    title: "What I Do When I'm Not Coding",
+    content: `When I'm not glued to my screen, I dive into different adventures. Star Trek marathons? Yes. Harry Potter marathons? Of course. I’m basically a sci-fi and fantasy sponge. Oh, and when I say I love gaming, I mean it. Plus, anime, manga, graphic novels… let’s just say, I geek out pretty hard when I'm not coding.`
   },
   {
-    title: 'My Mission',
-    content: `But the adventure doesn't stop there! I'm on an exciting mission to transition into a developer role at a company where innovation and creativity are not just encouraged but celebrated. My goal? To weave my passion for coding into impactful projects, to grow and thrive in a dynamic environment, and ultimately, to chart a course towards a bright and fulfilling future.`
+    title: "What's Next for Me",
+    content: `Lately, I've been thinking about my next move. I’m pretty pumped to step into a new role where innovation and creativity are part of the daily grind. I want to be somewhere that challenges me, somewhere I can continue building cool stuff and growing as a developer. It’s not just about coding anymore – it’s about bringing something awesome to life, and doing it with a great team.`
   },
   {
-    title: 'Let’s Connect',
-    content: `Eager to collaborate on a project that needs a sprinkle of creativity and a solid dose of technical skill? Or maybe you're in search of a teammate who brings enthusiasm and a unique perspective? Let's connect! You can find me on LinkedIn, GitHub, or reach out directly for a chat – I'm all about making connections and embarking on new tech adventures!`
+    title: 'Wanna Chat?',
+    content: `If you’re looking for someone to collaborate with on a fun project or just want to geek out about coding (or anything nerdy, really), hit me up! I'm always down for a good chat, and who knows? Maybe we'll end up building something epic together. You can find me on LinkedIn, GitHub, or just drop me a message directly. Let’s see where this adventure takes us!`
   }
 ];
 

@@ -7,13 +7,13 @@ import Profile from './pages/Profile/Profile';
 function App() {
   return (
     <Router>
-      <div className="App">
+      <div className="app-container">
         <Header />
-        <div className="main-content">
+        <main className="main-content">
           <Routes>
             <Route path="/" element={<Profile />} />
           </Routes>
-        </div>
+        </main>
         <Footer />
       </div>
     </Router>
