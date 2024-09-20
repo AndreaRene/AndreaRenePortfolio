@@ -1,3 +1,5 @@
+@import '../../styles/variables.scss';
+
 .carousel {
   position: relative;
   width: 100%;
@@ -9,17 +11,26 @@
 
 .carousel-inner {
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
   overflow: hidden;
   position: relative;
 }
 
+.carousel-title {
+  font-size: 2rem;
+}
+
 .carousel-item {
-  display: none;
+  display: flex;
+  flex-direction: column;
   flex-shrink: 0;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  width: 100%;
+  height: 100%;
   transition: opacity 0.5s ease-in-out;
 }
 
@@ -30,20 +41,31 @@
 .carousel-img {
   width: 100%;
   height: auto;
+  max-width: 100%;
+  object-fit: contain;
   border-radius: 5px;
+  cursor: zoom-in;
+  margin: 0 0 3rem;
 }
 
 .carousel-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
+  background-color: transparent;
+  color: $bright-attention;
   border: none;
   padding: 10px;
   cursor: pointer;
   z-index: 1000;
-  border-radius: 50%;
+  font-size: 24px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  transition: opacity 0.3s ease;
+}
+
+.carousel-btn.inactive {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .prev {
@@ -52,4 +74,8 @@
 
 .next {
   right: 20px;
+}
+
+.carousel-btn:hover:not(.inactive) {
+  font-size: 28px;
 }

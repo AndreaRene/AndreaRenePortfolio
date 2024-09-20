@@ -20,7 +20,8 @@
   border: 1px solid $main-blue;
   border-radius: 5px;
   padding: 20px;
-  box-shadow: 0 0 10px 0px $main-blue;
+  box-shadow: 0 0 20px 0px $main-blue;
+  background-color: $dark-grey;
 }
 
 .tabs {
@@ -30,26 +31,27 @@
   width: 80%;
   max-width: 900px;
   padding-right: 1rem;
-  gap: 10px;
+  gap: 1px;
 }
 
 .tabs button {
   padding: 10px 20px;
   background-color: $main-blue;
   color: $grey;
-  border: none;
   cursor: pointer;
   border-radius: 0 0 5px 5px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
-  text-decoration: none;
+  width: 170px;
 }
 
 .tabs button.active {
-  background-color: #ffcc00;
+  background-color: $bright-attention;
   color: $main-blue;
   border: 1px solid $main-blue;
   border-top: none;
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
 }
 
 .tabs button:hover {

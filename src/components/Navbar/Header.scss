@@ -1,6 +1,5 @@
 @import '../../styles/_variables.scss';
 
-/* Navbar layout */
 .navbar {
   background-color: $main-blue;
   padding: 1rem 4rem;
@@ -13,7 +12,6 @@
   width: 100%;
 }
 
-/* Logo styling */
 .navbar-logo {
   color: $pink;
   letter-spacing: 0.2rem;
@@ -22,7 +20,6 @@
   font-family: $font-playful;
 }
 
-/* Desktop links */
 .navbar-links {
   display: flex;
   gap: 2rem;
@@ -32,7 +29,6 @@
   display: flex;
 }
 
-/* Link styling */
 .nav-link {
   color: $bright-attention;
   text-decoration: none;
@@ -49,7 +45,6 @@
   color: $green;
 }
 
-/* Active link styling */
 .active {
   font-weight: bolder;
   text-decoration: underline;
@@ -59,12 +54,10 @@
   color: $pink;
 }
 
-/* Mobile menu icon (only visible on mobile) */
 .mobile-menu-icon {
   display: none;
 }
 
-/* For mobile view */
 @media (max-width: 768px) {
   .navbar-links {
     display: none;
