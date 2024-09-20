@@ -1,0 +1,60 @@
+@import '../../styles/variables.scss';
+
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.comic-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 70%;
+  width: 80%;
+  max-width: 900px;
+  margin: 0 auto;
+  border: 1px solid $main-blue;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 0 10px 0px $main-blue;
+}
+
+.tabs {
+  margin-top: -1px;
+  display: flex;
+  justify-content: right;
+  width: 80%;
+  max-width: 900px;
+  padding-right: 1rem;
+  gap: 10px;
+}
+
+.tabs button {
+  padding: 10px 20px;
+  background-color: $main-blue;
+  color: $grey;
+  border: none;
+  cursor: pointer;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.tabs button.active {
+  background-color: #ffcc00;
+  color: $main-blue;
+  border: 1px solid $main-blue;
+  border-top: none;
+}
+
+.tabs button:hover {
+  background-color: $dark-grey;
+  text-decoration: underline;
+  text-decoration-color: $bright-attention;
+  text-decoration-thickness: 3px;
+}
