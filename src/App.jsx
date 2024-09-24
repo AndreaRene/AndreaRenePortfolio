@@ -1,4 +1,9 @@
+import React from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './components/Navbar/Header';
+import Footer from './components/Footer/Footer';
+import Profile from './pages/Profile/Profile';
+import Portfolio from './pages/Portfolio/Portfolio';
 
 function App() {
   return (
