@@ -4,7 +4,7 @@ const Wishly = () => {
   return (
     <div className="wishly">
       <h2 className="project-h2">
-        <img src={wishlylogo} alt="TarotDeck logo" className="td-icon" />
+        <img src={wishlylogo} alt="Wishly logo" className="wishly-icon" />
         Wishly
         <a
           className="gh-link"
