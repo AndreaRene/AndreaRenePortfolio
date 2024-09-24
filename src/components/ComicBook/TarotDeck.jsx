@@ -1,4 +1,5 @@
 import React from 'react';
+import tdlogo from '../../assets/tdlogo.png';
 import PageOne from '../../assets/comic_pages/tarot_deck/td_comic_page1.png';
 import PageTwo from '../../assets/comic_pages/tarot_deck/td_comic_page2.png';
 import './ComicBook.scss';
@@ -15,6 +16,7 @@ const TarotDeck = () => {
   return (
     <div className="tarot-deck">
       <h2 className="project-h2">
+        <img src={tdlogo} alt="TarotDeck logo" className="td-icon" />
         Tarot Deck
         <a
           className="gh-link"

@@ -1,24 +1,52 @@
 @import '../../styles/variables.scss';
 
 .project-h2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-size: 2rem;
   font-weight: 700;
   margin: 2rem 0 0;
+  color: $bright-attention;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 0;
   gap: 1rem;
-  color: $bright-attention;
+}
+
+.deployment-link {
+  color: $main-blue;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+  text-decoration: underline;
+  text-decoration-color: $bright-attention;
+  text-decoration-thickness: 0.1rem;
+  text-underline-offset: 0.2rem;
+  text-align: center;
+}
+
+.deployment-link:hover {
+  color: $pink;
+  text-decoration-color: $main-blue;
+}
+
+.td-icon,
+.pom-icon {
+  height: 3rem;
 }
 
 .gh-icon {
-  height: 2rem;
+  height: 2.5rem;
+}
+
+.gh-icon,
+.pom-icon,
+.td-icon {
   width: auto;
   animation: wiggle 3s ease-in-out infinite;
 }
 
-.gh-link {
+.gh-link,
+.pom-link {
   display: flex;
   justify-content: center;
   align-items: center;
