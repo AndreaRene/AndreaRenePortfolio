@@ -45,6 +45,13 @@
   color: $green;
 }
 
+.nav-link.disabled {
+  color: gray;
+  cursor: not-allowed;
+  pointer-events: none;
+  text-decoration: none;
+}
+
 .active {
   font-weight: bolder;
   text-decoration: underline;
