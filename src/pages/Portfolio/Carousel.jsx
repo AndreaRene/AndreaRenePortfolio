@@ -31,7 +31,7 @@ const Carousel = ({ items }) => {
 
   // Fallback for no items
   if (items.length === 0) {
-    return <p>No images to display</p>;
+    return <p>Images coming soon!</p>;
   }
 
   return (
