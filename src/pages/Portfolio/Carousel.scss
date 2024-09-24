@@ -4,7 +4,7 @@
   position: relative;
   width: 100%;
   height: 100%;
-  overflow: hidden; 
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,7 +13,7 @@
 .carousel-inner {
   display: flex;
   width: 100%;
-  transition: transform 1s ease-in-out; 
+  transition: transform 1s ease-in-out;
 }
 
 .carousel-item {
@@ -58,4 +58,14 @@
 
 .carousel-btn:hover:not(.inactive) {
   font-size: 50px;
+}
+
+.carousel.no-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Ensure it takes up the full height of the container */
+  text-align: center;
+  font-size: 1.5rem;
+  color: $main-blue; /* You can adjust the color as needed */
 }
