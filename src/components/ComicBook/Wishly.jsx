@@ -1,7 +1,10 @@
+import wishlylogo from '../../assets/wishlylogo.svg';
+
 const Wishly = () => {
   return (
     <div className="wishly">
       <h2 className="project-h2">
+        <img src={wishlylogo} alt="TarotDeck logo" className="td-icon" />
         Wishly
         <a
           className="gh-link"
@@ -16,6 +19,7 @@ const Wishly = () => {
           />
         </a>
       </h2>
+      <p className="no-deploy">A Work in Progress!</p>
     </div>
   );
 };

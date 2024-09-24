@@ -13,20 +13,24 @@
 }
 
 .deployment-link {
-  color: $main-blue;
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin: 0;
   text-decoration: underline;
   text-decoration-color: $bright-attention;
   text-decoration-thickness: 0.1rem;
   text-underline-offset: 0.2rem;
-  text-align: center;
 }
 
 .deployment-link:hover {
   color: $pink;
   text-decoration-color: $main-blue;
+}
+
+.deployment-link,
+.no-deploy {
+  color: $main-blue;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+  text-align: center;
 }
 
 .td-icon,
