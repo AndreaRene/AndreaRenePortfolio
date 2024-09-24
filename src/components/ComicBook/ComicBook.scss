@@ -1,9 +1,44 @@
 @import '../../styles/variables.scss';
 
 .project-h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 2rem;
   font-weight: 700;
   margin: 2rem 0 0;
   padding: 0;
+  gap: 1rem;
   color: $bright-attention;
+}
+
+.gh-icon {
+  height: 2rem;
+  width: auto;
+  animation: wiggle 3s ease-in-out infinite;
+}
+
+.gh-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
