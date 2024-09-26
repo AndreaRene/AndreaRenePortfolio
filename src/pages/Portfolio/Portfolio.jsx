@@ -11,9 +11,9 @@ const PeaceofMind = React.lazy(
   () => import('../../components/ComicBook/PeaceofMind')
 );
 
+import { wishlyData } from '../../components/ComicBook/Wishly';
 import { tarotDeckData } from '../../components/ComicBook/TarotDeck';
 
-const wishlyData = { images: [] };
 const peaceOfMindData = { images: [] };
 
 function Portfolio() {
