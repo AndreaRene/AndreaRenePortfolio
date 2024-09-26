@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import Modal from '../../components/Modal/Modal'; // Assuming you have the Modal component
+import Modal from '../../components/Modal/Modal';
 import './Carousel.scss';
 
 const Carousel = ({ items }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  // Reset the index whenever the items change (i.e., when switching tabs)
+  // Reset the index when the items change
   useEffect(() => {
     setCurrentIndex(0);
   }, [items]);

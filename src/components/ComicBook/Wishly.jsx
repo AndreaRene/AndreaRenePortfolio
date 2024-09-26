@@ -1,5 +1,4 @@
 import wishlylogo from '../../assets/wishlylogo.svg';
-
 import PageOne from '../../assets/comic_pages/wishly/wishly_comic_page1.png';
 
 export const wishlyData = {
