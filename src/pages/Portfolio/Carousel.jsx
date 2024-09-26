@@ -1,10 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Modal from '../../components/Modal/Modal'; // Assuming you have the Modal component
 import './Carousel.scss';
 
 const Carousel = ({ items }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  // Reset the index whenever the items change (i.e., when switching tabs)
+  useEffect(() => {
+    setCurrentIndex(0);
+  }, [items]);
 
   // Handle previous button
   const handlePrev = () => {
@@ -48,15 +53,19 @@ const Carousel = ({ items }) => {
       >
         {items.map((item, index) => (
           <div className="carousel-item" key={index}>
-            <img
-              src={item.src}
-              alt={item.alt}
-              className="carousel-img"
-              onClick={handleImageClick}
-              style={{
-                cursor: isModalOpen ? 'zoom-out' : 'zoom-in'
-              }}
-            />
+            {item?.src ? (
+              <img
+                src={item.src}
+                alt={item.alt || 'Carousel image'}
+                className="carousel-img"
+                onClick={handleImageClick}
+                style={{
+                  cursor: isModalOpen ? 'zoom-out' : 'zoom-in'
+                }}
+              />
+            ) : (
+              <div className="no-image">Image not available</div>
+            )}
           </div>
         ))}
       </div>
@@ -84,8 +93,8 @@ const Carousel = ({ items }) => {
       {/* Modal */}
       <Modal isOpen={isModalOpen} onClose={closeModal}>
         <img
-          src={items[currentIndex].src}
-          alt={items[currentIndex].alt}
+          src={items[currentIndex]?.src}
+          alt={items[currentIndex]?.alt}
           className="modal-img"
           style={{ cursor: 'zoom-out' }}
         />
