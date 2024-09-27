@@ -1,0 +1,94 @@
+@import '../../styles/variables.scss';
+
+.lights-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  grid-column: 1/2;
+  grid-row: 3/4;
+  border: 1px solid $neon-pink;
+  border-radius: 5px;
+  padding: 1rem;
+  background-color: rgba(10, 31, 68, 0.5);
+  box-shadow: 0 0 10px $neon-pink;
+}
+
+.lights-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.light {
+  border: 3px solid silver;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: grey;
+
+  &.active {
+    background-color: $neon-pink;
+    box-shadow: 0 0 10px $neon-pink;
+  }
+}
+
+.light-controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 1rem;
+  padding: 0 1rem 1rem;
+}
+
+.lights-button {
+  border: 3px solid silver;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: $cosmic-black;
+  color: $neon-pink;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $neon-pink;
+    color: $cosmic-black;
+  }
+}
+
+/* Modal Styling */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(10, 31, 68, 0.9);
+  border: 2px solid $neon-pink;
+  padding: 2rem;
+  box-shadow: 0 0 20px $neon-pink;
+  z-index: 100;
+  text-align: center;
+}
+
+.modal-content {
+  p {
+    font-family: 'VT323', monospace;
+    color: $neon-pink;
+    font-size: 2rem;
+  }
+
+  .modal-close {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid $neon-pink;
+    background-color: $cosmic-black;
+    color: $neon-pink;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $neon-pink;
+      color: $cosmic-black;
+    }
+  }
+}
