@@ -1,7 +1,7 @@
 import React from 'react';
-import './Modal.scss';
+// import './Modals.scss';
 
-const Modal = ({ isOpen, onClose, children }) => {
+const ComicModal = ({ isOpen, onClose, children }) => {
   if (!isOpen) return null;
 
   return (
@@ -13,4 +13,4 @@ const Modal = ({ isOpen, onClose, children }) => {
   );
 };
 
-export default Modal;
+export default ComicModal;

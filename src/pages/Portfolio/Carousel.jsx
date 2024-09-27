@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Modal from '../../components/Modal/Modal';
+import ComicModal from '../../components/Modals/ComicModal';
 import './Carousel.scss';
 
 const Carousel = ({ items }) => {
@@ -91,14 +91,14 @@ const Carousel = ({ items }) => {
       </button>
 
       {/* Modal */}
-      <Modal isOpen={isModalOpen} onClose={closeModal}>
+      <ComicModal isOpen={isModalOpen} onClose={closeModal}>
         <img
           src={items[currentIndex]?.src}
           alt={items[currentIndex]?.alt}
           className="modal-img"
           style={{ cursor: 'zoom-out' }}
         />
-      </Modal>
+      </ComicModal>
     </div>
   );
 };

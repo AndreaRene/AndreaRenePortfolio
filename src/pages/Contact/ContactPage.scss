@@ -1,0 +1,163 @@
+/* form fonts */
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron:wght@400;500;700&family=VT323&display=swap');
+
+@import '../../styles/_variables.scss';
+
+.contact-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  background-color: $cosmic-black;
+  padding: 2rem;
+
+  .contact-hq-wrapper {
+    width: 80%; /* Full width of the viewport */
+  }
+
+  .contact-hq {
+    display: inline-block;
+    color: $neon-pink;
+    font-size: 1.5rem;
+    font-family: $font-main;
+  }
+
+  // @keyframes scrollBanner {
+  //   0% {
+  //     transform: translateX(100%); /* Start just outside the right edge */
+  //   }
+  //   100% {
+  //     transform: translateX(-100%); /* Move completely off the left edge */
+  //   }
+  // }
+
+  .date {
+    color: $neon-pink;
+    font-family: $font-main;
+    font-size: 1.5rem;
+    margin: 1rem 0;
+  }
+  .terminal-panel {
+    margin-bottom: 5rem;
+    padding: 2rem 1rem 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1rem;
+
+    width: 80%;
+    max-width: 1200px;
+    height: 80%;
+
+    background:
+      url('../../assets/hexbg.png') repeat,
+      linear-gradient(
+        180deg,
+        hsla(218, 74%, 15%, 1) 0%,
+        hsla(254, 65%, 27%, 1) 30%,
+        hsla(269, 85%, 37%, 1) 65%,
+        hsla(301, 59%, 52%, 1) 90%,
+        hsla(318, 100%, 65%, 1) 98%
+      );
+
+    background-size: cover;
+    border: 2px solid $neon-pink;
+    border-radius: 10px;
+    box-shadow: 0 0 15px $neon-pink;
+
+    /* Panel Section (common styling for all sections) */
+    .panel-section {
+      grid-column: 2 / 4;
+      grid-row: 1 / 3;
+      padding: 1rem;
+      border-radius: 5px;
+    }
+
+    /* Avatar Section */
+    .avatar-selection {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      grid-column: 1 / 2; /* Avatar in the first column */
+      grid-row: 1 / 2; /* On the second row */
+
+      .avatar-circle {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: $cosmic-black;
+        box-shadow: 0 0 10px $neon-pink;
+        margin: 0 auto;
+      }
+    }
+
+    /* Form Section (spanning the full width) */
+    .user-input {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      border: 1px solid $electric-blue;
+      box-shadow: 0 0 10px $electric-blue;
+      height: 100%;
+      background-color: rgba(10, 31, 68, 0.5);
+      .name-email {
+        display: flex;
+        gap: 1rem;
+        width: 100%;
+        height: 30%;
+
+        input {
+          height: 3rem;
+          padding: 0 1rem;
+        }
+      }
+
+      textarea {
+        width: 100%;
+        height: 100%;
+        margin-top: 1rem;
+        padding: 0.5rem 1rem;
+      }
+
+      button {
+        padding: 0.8rem 1.5rem;
+        background: linear-gradient(45deg, $neon-pink, $violet-purple);
+        color: $cosmic-black;
+        border: none;
+        font-family: $font-form-title;
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        border-radius: 5px;
+
+        &:hover {
+          background: linear-gradient(45deg, $electric-blue, $neon-pink);
+          box-shadow: 0 0 20px $neon-pink;
+        }
+      }
+    }
+
+    /* Contact Details Section */
+    .contact-details {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      background-color: rgba(10, 31, 68, 0.5);
+      grid-column: 2 / 4;
+      grid-row: 3 / 4;
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+
+        li {
+          color: $neon-pink;
+          font-family: $font-main;
+        }
+      }
+    }
+  }
+}

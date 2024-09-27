@@ -42,12 +42,17 @@ const Header = () => {
                 What I’ve Done
               </NavLink>
             </li>
-
-            {/* Disable the "Let’s Connect" link */}
             <li>
-              <span className="nav-link disabled">Let’s Connect</span>
+              <NavLink
+                to="/contact"
+                className={({ isActive }) =>
+                  isActive ? 'nav-link active' : 'nav-link'
+                }
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Let’s Connect
+              </NavLink>
             </li>
-
             {/* Disable the "Resumé" link */}
             <li>
               <span className="nav-link disabled">Resumé</span>
