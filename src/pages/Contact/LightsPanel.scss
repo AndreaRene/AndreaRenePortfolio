@@ -1,6 +1,7 @@
 @import '../../styles/variables.scss';
 
 .lights-panel {
+  position: relative; /* Make the lights panel the relative parent for modal */
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -22,16 +23,16 @@
 }
 
 .light {
+  list-style: none;
   border: 3px solid silver;
   border-radius: 50%;
   width: 50px;
   height: 50px;
-  background-color: grey;
+}
 
-  &.active {
-    background-color: $neon-pink;
-    box-shadow: 0 0 10px $neon-pink;
-  }
+.light.active {
+  background-color: $neon-pink;
+  box-shadow: 0 0 10px $neon-pink;
 }
 
 .light-controls {
@@ -47,48 +48,43 @@
   border-radius: 50%;
   width: 50px;
   height: 50px;
-  background-color: $cosmic-black;
-  color: $neon-pink;
-  cursor: pointer;
-
-  &:hover {
-    background-color: $neon-pink;
-    color: $cosmic-black;
-  }
 }
 
 /* Modal Styling */
 .modal {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(10, 31, 68, 0.9);
-  border: 2px solid $neon-pink;
-  padding: 2rem;
-  box-shadow: 0 0 20px $neon-pink;
-  z-index: 100;
-  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(10, 31, 68, 0.8); /* Semi-transparent dark overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .modal-content {
-  p {
-    font-family: 'VT323', monospace;
-    color: $neon-pink;
-    font-size: 2rem;
-  }
+  background-color: $nebula;
+  padding: 2rem;
+  border-radius: 10px;
+  color: $neon-pink;
+  font-family: 'VT323', monospace;
+  text-align: center;
+  box-shadow: 0 0 20px $neon-pink;
+  font-size: 2rem;
+}
 
-  .modal-close {
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    border: 1px solid $neon-pink;
-    background-color: $cosmic-black;
-    color: $neon-pink;
-    cursor: pointer;
+.modal-close {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: $cosmic-black;
+  color: $neon-pink;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
 
-    &:hover {
-      background-color: $neon-pink;
-      color: $cosmic-black;
-    }
+  &:hover {
+    background-color: $electric-blue;
+    color: $cosmic-black;
   }
 }
