@@ -23,11 +23,14 @@
 }
 
 .light {
-  list-style: none;
   border: 3px solid silver;
   border-radius: 50%;
   width: 50px;
   height: 50px;
+  background-color: darken(
+    $neon-pink,
+    40%
+  ); // Adjust this to your desired "dim" color
 }
 
 .light.active {
@@ -44,10 +47,26 @@
 }
 
 .lights-button {
-  border: 3px solid silver;
+  // border: 3px solid silver;
   border-radius: 50%;
   width: 50px;
   height: 50px;
+  background: linear-gradient(135deg, $neon-pink 20%, $cosmic-black 100%);
+  color: $cosmic-black;
+  // box-shadow: 0 0 10px 2px $neon-pink;
+  font-family: 'Orbitron', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: linear-gradient(135deg, $electric-blue 60%, $neon-pink 100%);
+    box-shadow: 0 0 12px 4px $neon-pink;
+  }
+
+  &:active {
+    background: linear-gradient(135deg, $violet-purple 60%, $neon-pink 100%);
+    box-shadow: inset 0 0 8px $neon-pink;
+  }
 }
 
 /* Lights Modal Styling */
