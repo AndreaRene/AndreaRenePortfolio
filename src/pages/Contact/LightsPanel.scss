@@ -50,20 +50,20 @@
   height: 50px;
 }
 
-/* Modal Styling */
-.modal {
+/* Lights Modal Styling */
+.lights-modal {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(10, 31, 68, 0.8); /* Semi-transparent dark overlay */
+  background-color: rgba(10, 31, 68, 0.8);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.modal-content {
+.lights-modal-content {
   background-color: $nebula;
   padding: 2rem;
   border-radius: 10px;
@@ -74,7 +74,7 @@
   font-size: 2rem;
 }
 
-.modal-close {
+.lights-modal-close {
   margin-top: 1rem;
   padding: 0.5rem 1rem;
   background-color: $cosmic-black;

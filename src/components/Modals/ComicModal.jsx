@@ -1,12 +1,11 @@
-import React from 'react';
-// import './Modals.scss';
+import './ComicModal.scss';
 
 const ComicModal = ({ isOpen, onClose, children }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="modal-overlay" onClick={onClose}>
-      <div className="modal-content" onClick={onClose}>
+    <div className="comic-modal-overlay" onClick={onClose}>
+      <div className="comic-modal-content" onClick={onClose}>
         {children}
       </div>
     </div>

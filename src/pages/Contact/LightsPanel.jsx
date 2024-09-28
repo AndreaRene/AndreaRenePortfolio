@@ -67,10 +67,10 @@ const LightsPanel = () => {
 
       {/* Modal for Error */}
       {showModal && (
-        <div className="modal">
-          <div className="modal-content">
+        <div className="lights-modal">
+          <div className="lights-modal-content">
             <p>THERE ARE FOUR LIGHTS</p>
-            <button className="modal-close" onClick={handleCloseModal}>
+            <button className="lights-modal-close" onClick={handleCloseModal}>
               Close
             </button>
           </div>
