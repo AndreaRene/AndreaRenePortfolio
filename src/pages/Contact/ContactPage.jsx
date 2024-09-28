@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import emailjs from 'emailjs-com'; // Add EmailJS import
 import { startTypewriterEffect } from './ContactPage';
 
 import './ContactPage.scss';
@@ -7,10 +8,38 @@ import LightsPanel from './LightsPanel';
 
 const ContactPage = () => {
   const [isMessageRead, setIsMessageRead] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
 
   const handleClick = () => {
     setIsMessageRead(true);
     startTypewriterEffect();
+  };
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    emailjs
+      .send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        formData,
+        import.meta.env.VITE_EMAILJS_API_KEY
+      )
+      .then(
+        (result) => {
+          console.log('Email successfully sent!', result.text);
+        },
+        (error) => {
+          console.log('Error sending email:', error.text);
+        }
+      );
   };
 
   return (
@@ -21,7 +50,7 @@ const ContactPage = () => {
             <>
               <p id="initial-message">You have a new message from HQ.</p>
               <button className="message-button" onClick={handleClick}>
-                Retrive Message
+                Retrieve Message
               </button>
             </>
           )}
@@ -41,13 +70,30 @@ const ContactPage = () => {
         <LightsPanel />
 
         <div className="panel-section user-input">
-          <form>
+          <form onSubmit={handleSubmit}>
             <p className="date">Mission Date:</p>
             <div className="name-email">
-              <input type="text" placeholder="Crewperson Name" />
-              <input type="email" placeholder="Electronic Communication ID" />
+              <input
+                type="text"
+                name="from_name"
+                placeholder="Crewperson Name"
+                onChange={handleChange}
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Electronic Communication ID"
+                onChange={handleChange}
+                required
+              />
             </div>
-            <textarea placeholder="Message to HQ" />
+            <textarea
+              name="message"
+              placeholder="Message to HQ"
+              onChange={handleChange}
+              required
+            />
             <button className="message-button" type="submit">
               Transmit Message
             </button>
@@ -61,6 +107,7 @@ const ContactPage = () => {
             <li>LinkedIn: linkedin.com/in/andreapresto</li>
           </ul>
         </div>
+
         <ControlPanel />
       </div>
     </div>
