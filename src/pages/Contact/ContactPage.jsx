@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import emailjs from 'emailjs-com'; // Add EmailJS import
 import { startTypewriterEffect } from './ContactPage';
 
 import './ContactPage.scss';
@@ -13,18 +12,26 @@ const ContactPage = () => {
     email: '',
     message: ''
   });
+  const [showModal, setShowModal] = useState(false); // Control error modal
 
   const handleClick = () => {
     setIsMessageRead(true);
     startTypewriterEffect();
   };
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
   const handleSubmit = (e) => {
     e.preventDefault();
+    const { name, email, message } = formData;
+
+    // Check if any of the fields are empty
+    if (!name || !email || !message) {
+      setShowModal(true); // Show error modal
+      return; // Prevent email submission if there are errors
+    }
+
+    setShowModal(false); // Hide error modal if all fields are filled
+
+    // Email sending logic
     emailjs
       .send(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
@@ -40,6 +47,10 @@ const ContactPage = () => {
           console.log('Error sending email:', error.text);
         }
       );
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
   };
 
   return (
@@ -64,39 +75,69 @@ const ContactPage = () => {
         </div>
 
         <div className="panel-section avatar-selection">
-          <div className="avatar-circle"></div>
+          {/* First Avatar: Pulsing Glow with Waves */}
+          <div className="avatar-circle">
+            <div className="ping"></div>
+            <div className="ping"></div>
+            <div className="ping"></div>
+          </div>
+
+          {/* Second Avatar: Rotating Radar Scan */}
+          <div className="avatar-circle radar-scan">
+            <div className="radar"></div>
+          </div>
         </div>
 
         <LightsPanel />
 
         <div className="panel-section user-input">
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} className="contact-form">
             <p className="date">Mission Date:</p>
             <div className="name-email">
               <input
                 type="text"
-                name="from_name"
                 placeholder="Crewperson Name"
-                onChange={handleChange}
-                required
+                value={formData.name}
+                onChange={(e) =>
+                  setFormData({ ...formData, name: e.target.value })
+                }
               />
               <input
                 type="email"
-                name="email"
                 placeholder="Electronic Communication ID"
-                onChange={handleChange}
-                required
+                value={formData.email}
+                onChange={(e) =>
+                  setFormData({ ...formData, email: e.target.value })
+                }
               />
             </div>
+
             <textarea
-              name="message"
               placeholder="Message to HQ"
-              onChange={handleChange}
-              required
+              value={formData.message}
+              onChange={(e) =>
+                setFormData({ ...formData, message: e.target.value })
+              }
             />
+
             <button className="message-button" type="submit">
               Transmit Message
             </button>
+
+            {/* Error Modal */}
+            {showModal && (
+              <div className="error-modal">
+                <div className="error-modal-content">
+                  <p>You must construct additional info</p>
+                  <button
+                    className="error-modal-close"
+                    onClick={handleCloseModal}
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            )}
           </form>
         </div>
 
@@ -107,7 +148,6 @@ const ContactPage = () => {
             <li>LinkedIn: linkedin.com/in/andreapresto</li>
           </ul>
         </div>
-
         <ControlPanel />
       </div>
     </div>

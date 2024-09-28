@@ -14,7 +14,7 @@
   .date,
   #initial-message {
     color: $neon-pink;
-    font-family: $font-main;
+    font-family: $font-form-title;
     font-size: 1.5rem;
     margin: 0 0 0.5rem;
   }
@@ -22,6 +22,7 @@
   #initial-message {
     text-align: center;
     animation: blink 1.5s step-start infinite;
+    font-family: $font-form-title;
 
     @keyframes blink {
       50% {
@@ -95,7 +96,7 @@
       display: block;
       color: $neon-pink;
       font-size: 1.5rem;
-      font-family: $font-main;
+      font-family: $font-form-main;
       overflow: hidden;
       white-space: nowrap;
       visibility: hidden; /* Initially hidden */
@@ -129,23 +130,90 @@
     /* Avatar Section */
     .avatar-selection {
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
       align-items: center;
       grid-column: 1 / 2;
       grid-row: 2 / 3;
+      gap: 1rem; /* Adds some space between the two avatars */
+    }
 
-      .avatar-circle {
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
-        background-color: $cosmic-black;
-        box-shadow: 0 0 10px $neon-pink;
-        margin: 0 auto;
+    .avatar-circle {
+      position: relative;
+      width: 45%;
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+      background-color: rgba(10, 31, 68, 0.8);
+      box-shadow: 0 0 10px $neon-pink;
+      overflow: hidden;
+      margin: 0 auto;
+    }
+
+    /* Pulsing Glow with Waves Effect */
+    .ping {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 20px;
+      height: 20px;
+      background-color: $neon-pink;
+      border-radius: 50%;
+      opacity: 0;
+      transform: translate(-50%, -50%);
+      animation: sonar-ping 2s infinite ease-out;
+    }
+
+    .ping:nth-child(2) {
+      animation-delay: 0.5s;
+    }
+
+    .ping:nth-child(3) {
+      animation-delay: 1s;
+    }
+
+    @keyframes sonar-ping {
+      0% {
+        transform: translate(-50%, -50%) scale(0.5);
+        opacity: 1;
+      }
+      100% {
+        transform: translate(-50%, -50%) scale(4);
+        opacity: 0;
+      }
+    }
+
+    /* Rotating Radar Scan Effect */
+    .radar-scan {
+      position: relative;
+      // width: 100%;
+      // height: 100%;
+      border-radius: 50%;
+      background-color: rgba(10, 31, 68, 0.8);
+      overflow: hidden;
+    }
+
+    .radar {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      clip-path: polygon(50% 50%, 100% 0%, 100% 100%, 50% 100%);
+      background-color: rgba(50, 205, 50, 0.4); /* Radar green */
+      animation: radar-rotate 2s linear infinite;
+    }
+
+    @keyframes radar-rotate {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
       }
     }
 
     /* User Input Form */
     .user-input {
+      position: relative;
       display: flex;
       flex-direction: column;
 
@@ -161,6 +229,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        width: 100%;
       }
 
       .name-email {
@@ -173,14 +242,17 @@
           height: 3rem;
           padding: 0 1rem;
           background-color: $nebula;
+          width: 1000%;
+          color: $starlight-grey;
         }
       }
 
       textarea {
         width: 100%;
-        height: 60%;
+        height: 50%;
         padding: 0.5rem 1rem;
         background-color: $nebula;
+        color: $starlight-grey;
       }
     }
 
@@ -203,6 +275,45 @@
           font-family: $font-main;
         }
       }
+    }
+  }
+  /* Add these styles for the error modal */
+  .error-modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 31, 68, 0.8); /* Semi-transparent dark overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px; /* Keep within form bounds */
+  }
+
+  .error-modal-content {
+    background-color: $nebula;
+    padding: 1.5rem;
+    border-radius: 10px;
+    color: $neon-pink;
+    font-family: 'VT323', monospace;
+    text-align: center;
+    box-shadow: 0 0 15px $neon-pink;
+    font-size: 1.5rem;
+  }
+
+  .error-modal-close {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: $cosmic-black;
+    color: $neon-pink;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+
+    &:hover {
+      background-color: $electric-blue;
+      color: $cosmic-black;
     }
   }
 }
